@@ -163,7 +163,7 @@ with torch.no_grad():
             prediction.append(y)
 
 #將結果寫入 csv 檔
-with open(sys.argv[2] + "/predict.csv", 'w') as f:
+with open(sys.argv[2], 'w') as f:
     f.write('Id,Category\n')
     for i, y in  enumerate(prediction):
         f.write('{},{}\n'.format(i, y))
